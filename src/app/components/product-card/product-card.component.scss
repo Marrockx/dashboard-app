@@ -1,0 +1,30 @@
+.product-card {
+    width: 300px;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.card-image {
+    height: 300px;
+}
+
+.favorite {
+    width: 24px;
+    height: 24px;
+    fill: #bdc2c5;
+    cursor: pointer;
+    padding-left: 8px;
+    margin-bottom: -4px;
+}
+
+.favorite.is-favorite {
+    fill: #f41818;
+}
+
+.favorite.is-favorite-hovering {
+    fill: #f97f73;
+}
+
+.favorite.is-favorite.is-favorite-hovering {
+    fill: #a19797;
+}

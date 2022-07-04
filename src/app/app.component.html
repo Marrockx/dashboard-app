@@ -1,0 +1,33 @@
+<mat-toolbar>
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav?.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            sort
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    {{title}}
+    <!-- <button mat-icon-button (click)="modeToggle()">
+        <mat-icon *ngIf="!toggled">light_mode</mat-icon>
+        <mat-icon *ngIf="toggled">bedtime</mat-icon>
+    </button> -->
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="app-sidenav">
+        <nav>
+            <a mat-button class="nav-link" *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" (click)="sidenav.mode === 'over' && sidenav?.close()">
+                <mat-icon>{{link.icon}}</mat-icon>
+                {{link.title}}
+            </a>
+        </nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

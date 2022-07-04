@@ -1,0 +1,84 @@
+$primary-color: rgb(235, 62, 62);
+$accent-color: #c27e8e;
+$dark-color: #000000;
+$light-color: #ffffff;
+
+$toolbar-height: 7.5vh;
+
+
+@mixin heading-text($colour: $primary-color) {
+    font-size: 1rem;
+    color: $colour;
+    text-transform: capitalize;
+}
+
+mat-toolbar {
+    background: rgb(239, 210, 215);
+    height: $toolbar-height;
+    @include heading-text($primary-color);
+}
+
+mat-sidenav-container {
+    height: calc(100vh - $toolbar-height);
+    font-family: 'Avenir';
+
+}
+
+mat-sidenav {
+    width: 320px;
+    border: none;
+    background: #c27e8e;
+    color: white;
+    padding-top: 1.2rem;
+}
+
+.nav-link {
+    font-family: 'Avenir';
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem;
+    margin-left: 1.4rem;
+    color: $light-color;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+
+}
+
+.nav-link:hover {
+    margin-left: 0;
+    transition: margin-left ease 1s;
+}
+
+.nav-link.active {
+    background-color: $light-color;
+    color: $primary-color;
+    border-radius: 40px 0 0 40px;
+    transition: margin-left ease 1s;
+
+}
+
+.nav-link .mat-icon {
+    // transform: scale(2);
+    font-size: 24px;
+    height: 32px;
+}
+
+.container {
+    height: calc(100vh - 98px);
+    font-family: 'Avenir';
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    // font-size: 2rem;
+    // color: lightgray;
+}
+
+.header-text {
+    color: $primary-color;
+}
