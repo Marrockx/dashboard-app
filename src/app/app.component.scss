@@ -6,17 +6,20 @@ $light-color: #ffffff;
 $toolbar-height: 7.5vh;
 
 
-@mixin heading-text($colour: $primary-color) {
+@mixin heading-text() {
     font-size: 1rem;
-    color: $colour;
     text-transform: capitalize;
 }
 
 mat-toolbar {
-    background: rgb(239, 210, 215);
     height: $toolbar-height;
-    @include heading-text($primary-color);
+    @include heading-text;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
+
+.toggle-button {}
 
 mat-sidenav-container {
     height: calc(100vh - $toolbar-height);
@@ -27,8 +30,6 @@ mat-sidenav-container {
 mat-sidenav {
     width: 320px;
     border: none;
-    background: #c27e8e;
-    color: white;
     padding-top: 1.2rem;
 }
 
@@ -38,7 +39,6 @@ mat-sidenav {
     text-align: left;
     padding: 1.2rem;
     margin-left: 1.4rem;
-    color: $light-color;
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -51,8 +51,6 @@ mat-sidenav {
 }
 
 .nav-link.active {
-    background-color: $light-color;
-    color: $primary-color;
     border-radius: 40px 0 0 40px;
     transition: margin-left ease 1s;
 
@@ -77,8 +75,4 @@ mat-sidenav {
 
     // font-size: 2rem;
     // color: lightgray;
-}
-
-.header-text {
-    color: $primary-color;
 }

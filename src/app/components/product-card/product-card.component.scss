@@ -8,13 +8,19 @@
     height: 300px;
 }
 
+.mat-card-content {
+    padding: 0 0.4rem;
+    padding-top: 1.2rem;
+
+}
+
 .favorite {
     width: 24px;
     height: 24px;
     fill: #bdc2c5;
     cursor: pointer;
     padding-left: 8px;
-    margin-bottom: -4px;
+    margin-bottom: -8px;
 }
 
 .favorite.is-favorite {

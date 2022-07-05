@@ -31,17 +31,6 @@ $dashboard-app-theme: mat.define-light-theme((color: (primary: $dashboard-app-pr
 
 /* You can add global styles to this file, and also import other style files */
 
-$primary-color: rgb(235, 62, 62);
-$accent-color: #c27e8e;
-$dark-color: #000000;
-$light-color: #ffffff;
-
-
-
-.header-text {
-  color: $primary-color;
-  text-transform: capitalize;
-}
 
 
 html,
@@ -52,7 +41,118 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  $nav-text-color: $light-color;
-  $sidenav-bg-color: $primary-color;
-  $nav-heading-color: $primary-color;
+
 }
+
+
+$primary-color: rgb(235, 62, 62);
+$secondary-color: rgb(239, 210, 215);
+$accent-color: #c27e8e;
+$dark-color: #000000;
+$dark-bg-color: #322024;
+$light-color: #ffffff;
+$dark-accent-color: #c27e8e;
+
+// $nav-text-color: $light-color;
+// $sidenav-bg-color: $primary-color;
+// $sidenav-container-bg-color: $light-color;
+// $heading-color: $primary-color;
+.header-text {
+  text-align: center;
+}
+
+.light-theme {
+
+  $nav-text-color: $light-color;
+  $nav-active-color: $light-color;
+  $nav-active-text-color: $primary-color;
+  $sidenav-bg-color: $primary-color;
+  $sidenav-container-bg-color: $light-color;
+  $heading-color: $primary-color;
+
+  mat-toolbar {
+    background: $secondary-color !important;
+    color: $primary-color;
+
+  }
+
+  mat-sidenav {
+    background: $accent-color !important;
+    color: $nav-text-color !important;
+  }
+
+  mat-sidenav-content {
+    background-color: $sidenav-container-bg-color;
+  }
+
+
+
+  .nav-link.active {
+    background-color: $nav-active-color;
+    color: $nav-active-text-color;
+
+  }
+
+  .header-text {
+    color: $heading-color;
+    text-transform: capitalize;
+  }
+
+
+}
+
+.dark-theme {
+  $nav-text-color: $dark-accent-color;
+  $nav-active-color: $dark-accent-color;
+  $nav-active-text-color: lighten($primary-color, 90%);
+  $sidenav-container-bg-color: $dark-bg-color;
+  $heading-color: lighten($primary-color, 30%);
+
+
+  mat-toolbar {
+    background: lighten($dark-bg-color, 60%);
+    color: $dark-bg-color;
+  }
+
+  mat-sidenav {
+    background: darken($accent-color, 40%) !important;
+    color: $nav-text-color !important;
+  }
+
+  mat-sidenav-content {
+    background-color: $sidenav-container-bg-color;
+  }
+
+  .nav-link.active {
+    background-color: $nav-active-color;
+    color: $nav-active-text-color;
+
+  }
+
+  .header-text {
+    color: $heading-color;
+    text-transform: capitalize;
+  }
+
+
+  mat-card {
+    background-color: $dark-color;
+    color: lighten($dark-color, 80%);
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// .mat-sidenav-content {
+//   background-color: $nav-text-color;
+// }

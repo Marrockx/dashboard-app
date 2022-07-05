@@ -8,10 +8,10 @@
         </mat-icon>
     </button>
     {{title}}
-    <!-- <button mat-icon-button (click)="modeToggle()">
-        <mat-icon *ngIf="!toggled">light_mode</mat-icon>
-        <mat-icon *ngIf="toggled">bedtime</mat-icon>
-    </button> -->
+    <button class="toggle-button" mat-icon-button (click)="modeToggle()">
+        <mat-icon *ngIf="theme === 'dark-theme'" title="Switch to Light Mode">light_mode</mat-icon>
+        <mat-icon *ngIf="theme === 'light-theme'" title="Switch to Night Mode">bedtime</mat-icon>
+    </button>
 </mat-toolbar>
 
 <mat-sidenav-container>
